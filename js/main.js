@@ -1,4 +1,4 @@
-const CONTRACT_ADDRESS = "";
+const CONTRACT_ADDRESS = "GSdjYaqG2TBLX9kAZxKrTpeaZwRZXr15vp1fxAHnpump";
 
 const links = {
   x: "https://x.com/DEBTCAT_SOL",

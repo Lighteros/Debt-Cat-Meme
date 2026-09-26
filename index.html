@@ -65,44 +65,77 @@
 
   <main>
     <section id="hero" class="hero">
-      <div class="hero-copy">
-        <p class="kicker reveal">Solana memecoin</p>
-        <h1 class="stripe-title reveal" aria-label="DEBT CAT">
-          <span>DEBT</span>
-          <span>CAT</span>
-        </h1>
-        <p class="tagline reveal">cat of national debt</p>
-        <p class="lede reveal">
-          A cream-coat auditor in a black-and-white snapback, phone in both paws,
-          tracking every borrowed trillion like it is a personal tab.
-        </p>
-        <div class="ticker-card reveal">
-          <span class="ticker-label">National debt, live vibe</span>
-          <strong class="ticker-value" id="debt-ticker">$36,000,000,000,000</strong>
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <div class="hero-meta">
+            <p class="kicker">Solana memecoin</p>
+            <span class="stamp">DEBTCAT</span>
+            <span class="stamp stamp-ghost">0 / 0 tax</span>
+          </div>
+          <h1 class="stripe-title" aria-label="DEBT CAT">DEBT CAT</h1>
+          <p class="tagline">cat of national debt</p>
+          <p class="lede">
+            Cream-coat auditor. Black-and-white snapback. Phone in both paws.
+            He does not settle the tab. He refreshes it.
+          </p>
+          <div class="ticker-card">
+            <span class="ticker-label">National debt, live vibe</span>
+            <strong class="ticker-value" id="debt-ticker">$36,000,000,000,000</strong>
+          </div>
+          <div class="ca-row">
+            <span class="ca-label">CA</span>
+            <code id="ca-text">GSdjYaqG2TBLX9kAZxKrTpeaZwRZXr15vp1fxAHnpump</code>
+            <button type="button" class="btn btn-ghost" id="copy-ca">Copy</button>
+          </div>
+          <div class="hero-cta">
+            <a class="btn btn-ink" id="hero-buy" href="https://swap.pump.fun/" target="_blank" rel="noopener">
+              <img src="./assets/icons/pumpswap.svg" alt="" />
+              Buy on PumpSwap
+            </a>
+            <a class="btn btn-line" id="hero-chart" href="https://dexscreener.com/solana/" target="_blank" rel="noopener">
+              <img src="./assets/icons/dexscreener.svg" alt="" />
+              DexScreener
+            </a>
+            <a class="btn btn-line" href="https://x.com/DEBTCAT_SOL" target="_blank" rel="noopener">
+              <img src="./assets/icons/x.svg" alt="" />
+              Follow
+            </a>
+          </div>
         </div>
-        <div class="ca-row reveal">
-          <span class="ca-label">CA</span>
-          <code id="ca-text">TBA</code>
-          <button type="button" class="btn btn-ghost" id="copy-ca">Copy</button>
+        <div class="hero-stage">
+          <div class="stage-plate"></div>
+          <div class="ring ring-slow"></div>
+          <div class="ring ring-mid"></div>
+          <div class="ring ring-fast"></div>
+          <span class="float-chip chip-a">SOLANA</span>
+          <span class="float-chip chip-b">SNAPBACK D</span>
+          <span class="float-chip chip-c">LEDGER LIVE</span>
+          <img class="hero-logo" src="./assets/logo.png" alt="DEBT CAT wearing a D snapback and holding a phone" />
         </div>
-        <div class="hero-cta reveal">
-          <a class="btn btn-ink" id="hero-buy" href="https://swap.pump.fun/" target="_blank" rel="noopener">
-            <img src="./assets/icons/pumpswap.svg" alt="" />
-            Buy on PumpSwap
-          </a>
-          <a class="btn btn-line" id="hero-chart" href="https://dexscreener.com/solana/" target="_blank" rel="noopener">
-            <img src="./assets/icons/dexscreener.svg" alt="" />
-            DexScreener
-          </a>
-        </div>
+        <dl class="hero-facts">
+          <div>
+            <dt>Name</dt>
+            <dd>DEBT CAT</dd>
+          </div>
+          <div>
+            <dt>Symbol</dt>
+            <dd>DEBTCAT</dd>
+          </div>
+          <div>
+            <dt>Chain</dt>
+            <dd>Solana</dd>
+          </div>
+          <div>
+            <dt>Tax</dt>
+            <dd>0 / 0</dd>
+          </div>
+        </dl>
       </div>
-      <div class="hero-stage">
-        <div class="ring ring-slow"></div>
-        <div class="ring ring-mid"></div>
-        <div class="ring ring-fast"></div>
-        <div class="logo-glow"></div>
-        <img class="hero-logo" src="./assets/logo.png" alt="DEBT CAT wearing a D snapback and holding a phone" />
-        <div class="hat-shadow"></div>
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>DEBT CAT</span><span>DEBTCAT</span><span>CAT OF NATIONAL DEBT</span><span>SOLANA</span><span>REFRESH THE TAB</span>
+          <span>DEBT CAT</span><span>DEBTCAT</span><span>CAT OF NATIONAL DEBT</span><span>SOLANA</span><span>REFRESH THE TAB</span>
+        </div>
       </div>
     </section>
 
