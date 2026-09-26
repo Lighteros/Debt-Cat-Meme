@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEBT CAT | DEBTCAT</title>
+  <meta name="description" content="DEBT CAT (DEBTCAT) — the cat of national debt. A Solana memecoin watching every trillion from under a snapback." />
+  <meta property="og:title" content="DEBT CAT | DEBTCAT" />
+  <meta property="og:description" content="Cat of national debt. Solana memecoin." />
+  <meta property="og:image" content="./assets/logo.png" />
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="orbit-field" aria-hidden="true">
+    <span class="orbit orbit-a"></span>
+    <span class="orbit orbit-b"></span>
+    <span class="orbit orbit-c"></span>
+  </div>
+  <div class="ledger-lines" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <canvas id="drift" class="drift" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="nav-brand" href="#hero">
+      <span class="d-seal" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="3"/>
+          <path d="M22 18h10.5c10 0 16.5 6.2 16.5 14S42.5 46 32.5 46H22V18z" stroke="currentColor" stroke-width="5.5" fill="none"/>
+          <path d="M22 24.5h9.2c6.4 0 10.4 3.8 10.4 7.5s-4 7.5-10.4 7.5H22" stroke="currentColor" stroke-width="3.2"/>
+        </svg>
+      </span>
+      <span class="nav-word">DEBT CAT</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#howtobuy">How to Buy</a>
+      <a href="#chart">Chart</a>
+      <a href="#joinus">Join Us</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-link" href="https://x.com/DEBTCAT_SOL" target="_blank" rel="noopener" aria-label="DEBT CAT on X">
+        <img src="./assets/icons/x.svg" alt="" />
+      </a>
+      <a class="icon-link" id="nav-dex" href="https://dexscreener.com/solana/" target="_blank" rel="noopener" aria-label="DexScreener">
+        <img src="./assets/icons/dexscreener.svg" alt="" />
+      </a>
+      <a class="btn btn-ink" id="nav-buy" href="https://swap.pump.fun/" target="_blank" rel="noopener">Buy</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-drawer" hidden>
+    <a href="#about">About</a>
+    <a href="#howtobuy">How to Buy</a>
+    <a href="#chart">Chart</a>
+    <a href="#joinus">Join Us</a>
+  </div>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-copy">
+        <p class="kicker reveal">Solana memecoin</p>
+        <h1 class="stripe-title reveal" aria-label="DEBT CAT">
+          <span>DEBT</span>
+          <span>CAT</span>
+        </h1>
+        <p class="tagline reveal">cat of national debt</p>
+        <p class="lede reveal">
+          A cream-coat auditor in a black-and-white snapback, phone in both paws,
+          tracking every borrowed trillion like it is a personal tab.
+        </p>
+        <div class="ticker-card reveal">
+          <span class="ticker-label">National debt, live vibe</span>
+          <strong class="ticker-value" id="debt-ticker">$36,000,000,000,000</strong>
+        </div>
+        <div class="ca-row reveal">
+          <span class="ca-label">CA</span>
+          <code id="ca-text">TBA</code>
+          <button type="button" class="btn btn-ghost" id="copy-ca">Copy</button>
+        </div>
+        <div class="hero-cta reveal">
+          <a class="btn btn-ink" id="hero-buy" href="https://swap.pump.fun/" target="_blank" rel="noopener">
+            <img src="./assets/icons/pumpswap.svg" alt="" />
+            Buy on PumpSwap
+          </a>
+          <a class="btn btn-line" id="hero-chart" href="https://dexscreener.com/solana/" target="_blank" rel="noopener">
+            <img src="./assets/icons/dexscreener.svg" alt="" />
+            DexScreener
+          </a>
+        </div>
+      </div>
+      <div class="hero-stage">
+        <div class="ring ring-slow"></div>
+        <div class="ring ring-mid"></div>
+        <div class="ring ring-fast"></div>
+        <div class="logo-glow"></div>
+        <img class="hero-logo" src="./assets/logo.png" alt="DEBT CAT wearing a D snapback and holding a phone" />
+        <div class="hat-shadow"></div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="section-head">
+        <p class="kicker reveal">The brief</p>
+        <h2 class="stripe-title stripe-title-sm reveal">ABOUT</h2>
+      </div>
+      <div class="about-grid">
+        <article class="about-card reveal">
+          <h3>Who is DEBT CAT</h3>
+          <p>
+            DEBT CAT is the mascot of a number too large to hold. Cream fur, ink-black brim,
+            a silent D on the crown. He does not protest the ledger. He refreshes it.
+          </p>
+        </article>
+        <article class="about-card reveal">
+          <h3>Why the phone</h3>
+          <p>
+            The debt does not sit in a vault. It lives on a screen. DEBTCAT keeps the
+            glass close, thumb-ready, as if one more swipe might finally settle the tab.
+          </p>
+        </article>
+        <article class="about-card reveal">
+          <h3>Why Solana</h3>
+          <p>
+            Fast rails for a heavy joke. DEBTCAT is a Solana memecoin: cheap to move,
+            loud to hold, and always one refresh away from a new high-water mark.
+          </p>
+        </article>
+      </div>
+      <dl class="stat-row">
+        <div class="stat reveal">
+          <dt>Name</dt>
+          <dd>DEBT CAT</dd>
+        </div>
+        <div class="stat reveal">
+          <dt>Symbol</dt>
+          <dd>DEBTCAT</dd>
+        </div>
+        <div class="stat reveal">
+          <dt>Chain</dt>
+          <dd>Solana</dd>
+        </div>
+        <div class="stat reveal">
+          <dt>Tax</dt>
+          <dd>0 / 0</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="howtobuy" class="howto">
+      <div class="section-head">
+        <p class="kicker reveal">Four moves</p>
+        <h2 class="stripe-title stripe-title-sm reveal">HOW TO BUY</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num">01</span>
+          <img class="step-icon" src="./assets/icons/phantom.svg" alt="Phantom" />
+          <h3>Open a wallet</h3>
+          <p>Install Phantom, create a Solana wallet, and keep the seed off the timeline.</p>
+          <a href="https://phantom.app/" target="_blank" rel="noopener">Get Phantom</a>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">02</span>
+          <img class="step-icon" src="./assets/icons/solana.svg" alt="Solana" />
+          <h3>Load SOL</h3>
+          <p>Bridge or buy SOL and send it to your Phantom address. Gas is the cover charge.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">03</span>
+          <img class="step-icon" src="./assets/icons/pumpswap.svg" alt="PumpSwap" />
+          <h3>Swap on PumpSwap</h3>
+          <p>Paste the DEBTCAT contract, set slippage if the book is moving, and confirm.</p>
+          <a id="step-buy" href="https://swap.pump.fun/" target="_blank" rel="noopener">Open PumpSwap</a>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">04</span>
+          <img class="step-icon" src="./assets/icons/dexscreener.svg" alt="DexScreener" />
+          <h3>Watch the chart</h3>
+          <p>Track candles, liquidity, and prints on DexScreener for the Solana pair.</p>
+          <a id="step-chart" href="https://dexscreener.com/solana/" target="_blank" rel="noopener">Open DexScreener</a>
+        </li>
+      </ol>
+    </section>
+
+    <section id="chart" class="chart">
+      <div class="section-head">
+        <p class="kicker reveal">Solana pair</p>
+        <h2 class="stripe-title stripe-title-sm reveal">CHART</h2>
+      </div>
+      <div class="chart-frame reveal">
+        <iframe
+          id="dex-embed"
+          title="DEBTCAT DexScreener chart"
+          src="https://dexscreener.com/solana?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=light&theme=light&chartStyle=0&chartType=usd&interval=15"
+          allow="clipboard-write"
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="joinus" class="join">
+      <div class="section-head">
+        <p class="kicker reveal">The lineup</p>
+        <h2 class="stripe-title stripe-title-sm reveal">JOIN US</h2>
+      </div>
+      <figure class="banner-wrap reveal">
+        <img class="banner" src="./assets/banner.png" alt="DEBTCAT wordmark beside the cat in a D snapback" />
+      </figure>
+      <div class="join-row reveal">
+        <a class="join-card" href="https://x.com/DEBTCAT_SOL" target="_blank" rel="noopener">
+          <img src="./assets/icons/x.svg" alt="" />
+          <span>Follow on X</span>
+          <small>@DEBTCAT_SOL</small>
+        </a>
+        <a class="join-card" id="join-dex" href="https://dexscreener.com/solana/" target="_blank" rel="noopener">
+          <img src="./assets/icons/dexscreener.svg" alt="" />
+          <span>DexScreener</span>
+          <small>Solana chart</small>
+        </a>
+        <a class="join-card" id="join-buy" href="https://swap.pump.fun/" target="_blank" rel="noopener">
+          <img src="./assets/icons/pumpswap.svg" alt="" />
+          <span>PumpSwap</span>
+          <small>Buy DEBTCAT</small>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>DEBT CAT — DEBTCAT — cat of national debt. Not financial advice. Memes are not a treasury bill.</p>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
